@@ -1,0 +1,196 @@
+DICTIONARY COMPREHENSION:
+
+d={n:n*n for n in range(1,5)}
+print(d)
+
+OUTPUT:
+{1: 1, 2: 4, 3: 9, 4: 16}
+-------------------------------------------------------------------------------------------------------------------
+#calculating product price for 5 units
+
+old={'rice':60,'dhaal':120,'oil':150}
+new={product:price*5 for (product,price) in old.items()}
+print(new)
+
+OUTPUT:
+{'rice': 300, 'dhaal': 600, 'oil': 750}
+----------------------------------------------------------------------------------------------------------------
+#with check
+
+real={'sam':24,'angel':18,'kumar':35}
+now={name:age for (name,age) in real.items() if age>20}
+print(now)
+
+OUTPUT:
+{'sam': 24, 'kumar': 35}
+----------------------------------------------------------------------------------------------------------------------
+-create a list wih 8 customers names display dictionary along with the discounts using random function
+
+import random
+l=["gowri","aishu","shamma","sunnu","sri","keerti","hp","anu"]
+dict={names:random.randint(1,100) for names in l}
+print(dict)
+
+OUTPUT:
+{'gowri': 68, 'aishu': 73, 'shamma': 64, 'sunnu': 56, 'sri': 85, 'keerti': 89, 'hp': 38, 'anu': 75}
+-----------------------------------------------------------------------------------------------------------------------
+-student name and percentage using random and zip
+
+import random
+l1=list(map(str,input("enter names:").split()))
+marks=[]
+for i in range (len(l1)):
+    a=(random.randint(300,500)/500)*100
+    marks.append(a)
+d={a:b for(a,b) in zip(l1,marks)}
+print(d)
+
+OUTPUT:
+enter names:g s su ash sri ker
+{'g': 73.6, 's': 76.8, 'su': 78.2, 'ash': 70.19999999999999, 'sri': 82.0, 'ker': 71.6}
+
+2-methods
+
+import random
+l1=list(map(str,input("enter names:").split()))
+marks=[]
+for i in range (len(l1)):
+    a=(random.randint(300,500))
+    print(a)
+    b=(a/500)*100
+    marks.append(b)
+d={a:b for(a,b) in zip(l1,marks)}
+print(d)
+
+OUTPUT:
+enter names:gowri shamma ssunnu aishu sri
+369
+344
+352
+442
+475
+{'gowri': 73.8, 'shamma': 68.8, 'ssunnu': 70.39999999999999, 'aishu': 88.4, 'sri': 95.0}enter names:gowri shamma sunnu aishu sri
+
+------------------------------------------------------------------------------------------------------------------------------
+STRING FUNCTIONS
+
+s="gowri namratha"
+print(s.upper())
+print(s.lower())
+print(s.capitalize())
+print(s.replace('w','t'))
+print(s.strip())
+print(s.split(','))
+print(s.center(20,'*'))
+print(s.count('n'))
+print(s.count('a',6,len(s)))
+print(s.endswith('w',0,len(s)))
+print(s.find('h',0,len(s)))
+print(s.index('m',4,len(s)))
+print(s.islower())
+print(s.isupper())
+print(s.istitle())
+print(max(s))
+print(min(s))
+print(s.startswith('i'))
+print(s.rfind('a',0,len(s)))
+
+OUTPUT:
+GOWRI NAMRATHA
+gowri namratha
+Gowri namratha
+gotri namratha
+gowri namratha
+['gowri namratha']
+***gowri namratha***
+1
+3
+False
+12
+8
+True
+False
+False
+w
+ 
+False
+13
+---------------------------------------------------------------------------------------------------------------------------------
+char in string
+
+s=input("enter a string:")
+ch=input("enter a character:")
+if ch in s:
+    print("present")
+else:
+    print("not present")
+
+OUTPUT:
+enter a string:gowri
+enter a character:w
+present
+---------------------------------------------------------------------------------------------------------------------------------
+palindrome
+
+s=input("enter a string:")
+if(s==s[::-1]):
+    print("palindrome")
+else:
+    print("not palindrome")
+
+OUTPUT:
+enter a string:madam
+palindrome
+
+---------------------------------------------------------------------------------------------------------------------------------
+counting number of spaces:
+
+s=input("enter a string:")
+count=0
+for i in s:
+    if i==" ":
+        count+=1
+print(count)
+
+OUTPUT:
+enter a string:g  o w  r  i
+7
+--------------------------------------------------------------------------------------------------------------------------------
+
+vowels of a character:
+
+l=list(map(str,input("enter characters:").split()))
+s=input("enter string:")
+count=0
+for i in l:
+    if(i in s):
+        count+=1
+print(count)
+
+OUTPUT:
+enter your size:5
+enter characters:a e i o u
+enter string:gowri
+2
+---------------------------------------------------------------------------------------------------------------------------------
+
+mathmodules
+
+import math
+print("ceil 12.5:",math.ceil(12.5))
+print("floor 12.5:",math.floor(12.5))
+print("sqrt 345:",math.sqrt(12.5))
+print("factorial 3:",math.factorial(3))
+print("power 2,3:",math.pow(2,3))
+print("reminder 10,3:",math.fmod(10,3))
+a,b=divmod(8,30)
+print(a,b)
+
+OUTPUT:
+ceil 12.5: 13
+floor 12.5: 12
+sqrt 345: 3.5355339059327378
+factorial 3: 6
+power 2,3: 8.0
+reminder 10,3: 1.0
+0 8

@@ -1,0 +1,100 @@
+STRINGS:which are enclosed within "" or ''
+
+EXAMPLES:
+n="hi i'am "gowri""
+SyntaxError: invalid syntax
+n="hi i'am "Gowri""
+SyntaxError: invalid syntax
+n="hi i'am"
+n
+"hi i'am"
+nm='hi i'am'
+SyntaxError: unterminated string literal (detected at line 1)
+n="hi i\'am'
+SyntaxError: incomplete input
+n='hi i\'am'
+n
+"hi i'am"
+
+FUNCTIONS FOR STRING:
+
+s.upper()
+s.lower() or s.casefold()
+.capitalize()
+s.replace(h,a)
+s.strip()-
+s.split()or s.split('a')
+s.center(31,'*')
+s.count('a')
+s.count('a',5,len(s))
+s.endswith('a',5,len(s))
+s.find('a',0,len(s))
+s.index('a',0,len(s))
+s.islower()
+s.isupper()
+s.istitle()
+caps/max(s)
+min(s)
+s.startswith()
+s.rfind('a',0,len(s))
+
+MUTABLE:can be changed after creation
+-list
+-set
+-dictionary
+
+
+EXAMPLES:
+l=[20,40,60]
+id(l)
+2135662842816
+l.append(50)
+l
+[20, 40, 60, 50]
+id(l)
+2135662842816
+
+
+
+IMMUTABLE:cannot the changed after creation
+-int
+-float
+-string
+-bool
+-tuple
+
+EXAMPLE:
+x=20
+x
+20
+x=500
+x
+500
+id(x)
+2135656877808
+r=100
+r
+100
+id(r)
+140732060987272
+r=200
+r
+200
+id(r)
+140732060990472
+r=400
+r
+400
+id(r)
+2135656881968
+
+MATH MODULES:
+
+-math.ceil
+-math.floor
+-math.sqrt
+-math.factorial
+-math.pow
+-math.fmod
+
+divmod-help to check both reminder and quotient

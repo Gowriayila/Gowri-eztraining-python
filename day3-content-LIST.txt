@@ -1,0 +1,182 @@
+LIST:
+l=[1,4,7.4,"gowri"]
+l
+[1, 4, 7.4, 'gowri']
+l[3]
+'gowri'
+l[2:4]
+[7.4, 'gowri']
+l[1:3]
+[4, 7.4]
+l[0:]
+[1, 4, 7.4, 'gowri']
+l[:4]
+[1, 4, 7.4, 'gowri']
+l[-2]
+7.4
+l[::-1]
+['gowri', 7.4, 4, 1]
+
+FUNCTIONS OF A LIST:
+
+APPEND():add an element to the end of the list. 
+EXTEND():add all elements of a list to another list
+INSERT():insert an element at defined index
+REMOVE():removes an element from the list
+POP():removes and returns an element at the given index
+CLEAR():rmoves all elements from the list
+INDEX():returns the index of the element
+COUNT():returns the number of elements in the list
+SORT():sorts item in ascending order
+REVERSE():reverse the order of the list
+COPY():returns a shallow copy of the list
+
+SET:
+UNORDERED
+SO INDEX NOT THERE 
+MUTABLE
+DUPILICATE ELEMENTS ARE NOT ALLOWED
+
+FUNCTIONS OF SET
+
+s.add(element)
+s.update([20,40])
+s.discard(element)
+s.remove(element)-get error is element not present
+s1={1,2,3}
+s2={4,5,6,1,2}
+s1|s2 union or s1.union(s2)
+s1&s2 intersection or s1.intersection(s2)
+s1-s2 difference or s1.difference(s2)
+is.superset()-gives superset
+s1^s2 or s1.symmetric_difference(s2))
+
+EXAMPLES:
+
+s.update([23,56])
+s
+{1, 2, 3, 4, 5, 6, 8, 23, 56}
+s.discard(56)
+s
+{1, 2, 3, 4, 5, 6, 8, 23}
+s.remove(8)
+s
+{1, 2, 3, 4, 5, 6, 23}
+
+s2={7,8,9,1,2,3}
+s2
+{1, 2, 3, 7, 8, 9}
+s
+{1, 2, 3, 4, 5, 6, 23}
+s|s2
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 23}
+s&s2
+{1, 2, 3}
+s-s2
+{4, 5, 6, 23}
+s2-s
+{8, 9, 7}
+s2.issuperset(s)
+False
+s.issuperset(s2)
+False
+s
+{1, 2, 3, 4, 5, 6, 23}
+s2
+{1, 2, 3, 7, 8, 9}
+s2.issuperset(s)
+False
+s.issuperset(s2)
+False
+s
+{1, 2, 3, 4, 5, 6, 23}
+s2
+{1, 2, 3, 7, 8, 9}
+print(s2.symmetric_difference(s))
+{4, 5, 6, 7, 8, 9, 23}
+
+
+TUPLE:
+ordered
+unchangable
+cant include items
+can fetch using t[index]
+METHODS-count and index
+count-elements no of occurance
+index-returns element index
+
+INITIALISATION IN TUPLE:
+
+t=1,2,3
+  or
+t=(1,2,3)
+FUNCTIONS OF TUPLE:
+
+type()
+t.count()
+t.index()
+
+examples:
+t=(3,2,5,6.6,"GOWRI")
+type(t)
+<class 'tuple'>
+t.count(5)
+1
+
+t.index(5)
+2
+
+DICTIONARY:
+
+it contains elements with two units, key and values
+keys must be unique
+
+FUNCTIONS:
+
+d.keys()
+d.values()
+d.items()
+d[] or d.get(keys)-to get element
+d.fromkeys(2 arguments)
+d.updates()-add one or more elements
+d.popitem()-deletes recently added elements
+d.pop()-removes item
+d.setdefault()-if the key is not in dic it will be added or does nothing will be done.
+
+EXAMPLES:
+
+d={1:"gowri",2:"namratha"}
+d
+{1: 'gowri', 2: 'namratha'}
+type(d)
+<class 'dict'>
+d.keys()
+dict_keys([1, 2])
+d.values()
+dict_values(['gowri', 'namratha'])
+d.items()
+dict_items([(1, 'gowri'), (2, 'namratha')])
+d[1]
+'gowri'
+d.get(1)
+'gowri'
+d.get(2)
+'namratha'
+d.formkeys(d)
+{1:None,2:None}
+d.formkeys(d,100)
+{1: 100,2: 100}
+d.update{3:'f'}
+d
+{1: 'a', 2: 'c', 3: 'f'}
+d.pop(2)
+'c'
+d
+{1: 'a', 3: 'f'}
+d.popitem()
+(3, 'f')
+d
+{1: 'a'}
+d.setdefault('gowri',50)
+50
+

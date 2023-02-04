@@ -1,0 +1,55 @@
+q1='''date of birth of gowri
+a.feb 10
+b.march 12
+c.october 16
+d.april 1'''
+
+q2='''which is your fav colour
+a.pink
+b.blue
+c.black
+d.orange'''
+
+q3='''fav cricketer of gowri
+a.surya kumar yadav
+b.kohli
+c.dhoni
+d.rohit'''
+
+q4='''fav singer
+a.justin bieber
+b.jungkook
+c.v
+d.sid sriram'''
+
+q5='''fav hero
+a.ram charan
+b.balayya
+c.pawan kalyan
+d.dhanush'''
+
+questions={q1:"d",q2:"c",q3:"b",q4:"a",q5:"c"}
+name=input("hi enter your name:")
+print("hello",name,"welcome to the quiz")
+score=0
+for i in questions:
+    print()
+    print(i)
+    flag1=input("do you want to skip the question (yes/no)")
+    if flag1=="yes":
+        continue
+    ans=input("enter your answer")
+    if ans==questions[i]:
+        print("wow!you got one point")
+        score=score+1
+        print("your current score is:",score)
+    else:
+        print("wrong answer,u lost 1 mark")
+        ptiny("correct answer",questions[i])
+        score=score-1
+        print("your current score is",score)
+    flag2=input("do you want to quit? (yes/no)")
+    if flag2=="yes":
+        break
+print("your total score is",score)
+

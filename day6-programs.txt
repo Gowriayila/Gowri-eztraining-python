@@ -1,0 +1,137 @@
+EXCEPTION HANDLING:
+
+a=200
+b=0
+try:#u r telling this may have error
+    print(a/b)
+#except exception:# says if error through i handle
+#print("cant divide any number by zero")
+
+except Exception as e:
+    print("please note, number cant be divided by zero",e)
+
+#t check your program execution goes till end or not
+print("bye")
+
+OUTPUT:
+please note, number cant be divided by zero, division by zero
+bye
+----------------------------------------------------------------------------------
+
+progran 2:USING FINALLY
+
+a=200
+b=0
+try:
+    print("resource open")
+    print(a/b)
+except Exception as e:
+    print("dont give second number as zero",e)
+
+finally:#will get executed if their is error or not
+    print("resource closed")
+
+OUTPUT:
+resource open
+dont give second number as zero division by zero
+resource closed
+
+----------------------------------------------------------------------------------
+
+SPECIFIC ERROR:
+
+#like specialised docters
+#for those specific error only those excetion
+#blocks will get executed
+a=10
+try:
+    b=int(input("enter the number"))
+    print("resource open")
+    print(a/b)
+except ZeroDivisionError as e:
+    print("please note, number cant be divided by zero",e)
+except ValueError as e:
+    print("invalid input",e)
+except Exception as e:#if not above errors
+    print("other error",e)
+finally:
+    print("resource closed")
+
+OUTPUT:
+enter the number4
+resource open
+2.5
+resource closed
+
+-----------------------------------------------------------------------------
+RAISE ERROR:
+
+x=100
+if x%2!=0:
+    raise Exception("x should be even number")
+else:
+    print("x is even number ,correct")
+
+OUTPUT:
+x is even number ,correct
+------------------------------------------------------------------------------
+OOPs:-class and object
+
+class computer:  #class defination
+    def config(self):#function call
+        print("yes")
+        
+lenovo=computer() #object 1
+lenovo.config()
+
+dell=computer() #object 2
+dell.config()
+
+OUTPUT:
+yes
+yes
+---------------------------------------------------------------------------------
+CONSTRUCTOR:
+
+class Employee:
+    def __init__(self,name,id):
+        self.id=id
+        self.name=name
+    def display(self):
+        print(self.id,self.name)
+emp1=Employee("john",101)
+emp2=Employee("david",102)
+
+emp1.display()
+emp2.display()
+
+OUTPUT:
+101 john
+102 david
+--------------------------------------------------------------------------------
+variable access in class method:
+
+#variables and var.access in class and method
+class computer():
+    a=10
+    b=30
+    print("class variable inside class",a)
+    def config(self):#config is a function
+        c=100
+        print("yes")
+        print("instance access",self.b)
+lenovo=computer()
+print(lenovo.a)
+print(lenovo.a+lenovo.b)
+dell=computer()
+print("dell",dell.a)
+lenovo.config()
+
+OUTPUT:
+class variable inside class 10
+10
+40
+dell 10
+yes
+instance access 30
+--------------------------------------------------------------------------------

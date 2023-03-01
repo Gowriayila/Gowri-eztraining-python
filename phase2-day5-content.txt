@@ -1,0 +1,64 @@
+TYPES OF TREES:
+-binary tree:node can have maximun 2 child
+
+BINARY TREE TRAVERSAL:
+
+-inorder:left-root-right    LDR
+-preorder:root-left-right   DLR
+-postorder:left,right,root  LRD
+
+TYPES OF BINARY TREE:
+-full binary tree:all nodes will have zero or 2 child.
+-degenerate tree:every node will have zero or 1 child.
+-skewed binary tree:
+        a                      a
+       /                        \
+      b                          b
+     /                            \
+    c                              c
+ left skew binary tree          right skew binary tree
+
+TYPES BASED ON COMPLETION:
+
+-complete binary tree
+ 1. every level should be full
+ 2.in last level if it is incomplte nodes should ne present at extreme left side
+
+        12
+       /  \
+      8    18
+     / \
+    5   11
+
+-perfect binary tree:
+ all internal nodes those who have 2 childern and a leaf nodes both should be at same level
+ 
+                   18
+                  /  \
+                15    30
+               /  \   /  \
+              40  50 100 40
+
+-balanced binary tree:
+  for all the nodes height of left subtree-height of right subtree can be 0 or 1.
+           0(d=0)                          0(d=2)
+          / \                             / \
+    (d=0)1   2(d=0)                (d=1) 1   2(d=0)
+        / \                             / \
+  (d=0)3   4(d=0)                 (d=1)3   4(d=0)
+                                      /
+                                     5(d=0)
+ 
+  BALANCED                         UNBALANCED
+
+BINARY SEARCH TREE:
+ 1.all the left side elements should be lesser than its parent 
+ 2.all the right side element should be greater than it parent
+              7
+            /  \
+           3    10
+         /   \    \
+        2     5    12
+
+         
+
